@@ -22,6 +22,10 @@ FROM ghcr.io/svalbard-watch/swi-cron-base:1.0.0-py3.14
 USER root
 COPY --from=builder /usr/local/lib/python3.14/site-packages /usr/local/lib/python3.14/site-packages
 COPY --from=builder /usr/local/bin /usr/local/bin
+# The job never installs packages at runtime: remove the pip, setuptools and wheel that came with
+# the builder's site-packages (and pip's vendored copies of urllib3, msgpack, certifi, ...), so
+# they are neither exposed nor flagged by image scanners. The base image has none of them.
+RUN python -m pip uninstall -y pip setuptools wheel 2>/dev/null || true
 
 # The job downloads into ./data and writes into two volumes (./export and ./metadata).
 # Create the mount points owned by the job user: an empty named volume inherits the
