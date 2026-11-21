@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.3.0](https://github.com/svalbard-watch/swi-mapcache-seaice/compare/0.2.1...0.3.0) (2026-11-21)
+
+
+### Features
+
+* **docker:** build on swi-cron-base ([01a5532](https://github.com/svalbard-watch/swi-mapcache-seaice/commit/01a55323bb2aa190a034031eb8a490b4a8654355))
+* **docker:** build on swi-cron-base ([86e3cd5](https://github.com/svalbard-watch/swi-mapcache-seaice/commit/86e3cd5522071e5235e7b60740c0f6601fac0f42))
+
+
+### Bug Fixes
+
+* **docker:** remove pip again after copying the builder's packages ([354c1b1](https://github.com/svalbard-watch/swi-mapcache-seaice/commit/354c1b1ed412fcd351dfc6fafb03c7849a81968e))
+
 ## [0.2.1](https://github.com/UNIS-Svalbard-Weather-Information/swi-mapcache-seaice/compare/0.2.0...0.2.1) (2026-10-26)
 
 
